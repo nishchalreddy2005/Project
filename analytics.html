@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard</title>
+    <link rel="stylesheet" href="styled.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Analytics</h1>
+        <div class="charts">
+            <div class="chart-container">
+                <canvas id="barChart1"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="lineChart1"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="doughnutChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="pieChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="barChart2"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="lineChart2"></canvas>
+            </div>
+        </div>
+        <button class="back-btn">Back</button>
+    </div>
+
+    <script>
+        // Bar Chart 1
+        const ctx1 = document.getElementById('barChart1').getContext('2d');
+        new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+                datasets: [{
+                    label: 'Dataset 1',
+                    data: [120, 150, 200, 180, 130],
+                    backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                }, {
+                    label: 'Dataset 2',
+                    data: [100, 130, 180, 140, 120],
+                    backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                }]
+            },
+            options: { responsive: true }
+        });
+
+        // Line Chart 1
+        const ctx2 = document.getElementById('lineChart1').getContext('2d');
+        new Chart(ctx2, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+                datasets: [{
+                    label: 'Dataset 1',
+                    data: [150, 200, 180, 120, 140],
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    fill: false
+                }, {
+                    label: 'Dataset 2',
+                    data: [120, 160, 130, 100, 90],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    fill: false
+                }]
+            },
+            options: { responsive: true }
+        });
+
+        // Doughnut Chart
+        const ctx3 = document.getElementById('doughnutChart').getContext('2d');
+        new Chart(ctx3, {
+            type: 'doughnut',
+            data: {
+                labels: ['A', 'B'],
+                datasets: [{
+                    data: [60, 40],
+                    backgroundColor: ['rgba(54, 162, 235, 0.6)', 'rgba(75, 192, 192, 0.6)']
+                }]
+            },
+            options: { responsive: true }
+        });
+
+        // Pie Chart
+        const ctx4 = document.getElementById('pieChart').getContext('2d');
+        new Chart(ctx4, {
+            type: 'pie',
+            data: {
+                labels: ['X', 'Y'],
+                datasets: [{
+                    data: [70, 30],
+                    backgroundColor: ['rgba(54, 162, 235, 0.6)', 'rgba(75, 192, 192, 0.6)']
+                }]
+            },
+            options: { responsive: true }
+        });
+
+        // Bar Chart 2
+        const ctx5 = document.getElementById('barChart2').getContext('2d');
+        new Chart(ctx5, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+                datasets: [{
+                    label: 'Dataset 1',
+                    data: [130, 140, 150, 160, 170],
+                    backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                }]
+            },
+            options: { responsive: true }
+        });
+
+        // Line Chart 2
+        const ctx6 = document.getElementById('lineChart2').getContext('2d');
+        new Chart(ctx6, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+                datasets: [{
+                    label: 'Dataset 1',
+                    data: [150, 180, 200, 170, 130],
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    fill: true,
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)'
+                }]
+            },
+            options: { responsive: true }
+        });
+    </script>
+</body>
+</html>

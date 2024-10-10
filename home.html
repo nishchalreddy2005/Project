@@ -1,0 +1,124 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback and Evaluation System</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width:100%;
+        }
+        .background-image {
+            background-image: url('images/3.jpg'); /* Update path if needed */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .title {
+            position: absolute;
+            top: 20px;
+            font-size: 2em;
+            color: black;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+        .icon-container {
+            position: absolute;
+            bottom: 50px;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+        .icon-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .icon-box img {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .icon-box p {
+            margin-top: 10px;
+            font-size: 1.2em;
+            font-family: Arial, sans-serif;
+        }
+
+                    .admin-text {
+                        position: absolute;
+    width: 100%;
+    color: black; /* Main text color */
+    font-weight: bold;
+    margin: 0;
+    margin-left: 1.7%;
+    
+    /* Adding a white border effect around the black text */
+    text-shadow: 
+        -1px -1px 0 white,  
+         1px -1px 0 white,
+        -1px  1px 0 white,
+         1px  1px 0 white;
+            }
+
+
+            .student-text {
+    position: absolute;
+    width: 100%;
+    color: black; /* Main text color */
+    font-weight: bold;
+    margin: 0;
+    margin-left: 1.7%;
+    
+    /* Adding a white border effect around the black text */
+    text-shadow: 
+        -1px -1px 0 white,  
+         1px -1px 0 white,
+        -1px  1px 0 white,
+         1px  1px 0 white;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="background-image">
+        <div class="title">STUDENT FEEDBACK AND EVALUATION SYSTEM</div>
+
+        <div class="icon-container">
+            <div class="icon-box">
+                <a href="Adminlogin.html">  <!-- Link to Admin Login page -->
+                    <img src="https://img.icons8.com/ios-filled/100/000000/administrator-male.png" alt="Admin Icon" >
+                    <p class="admin-text">Admin</p>
+                </a>
+            </div>
+            <div class="icon-box">
+                <a href="Facultylogin.html">  <!-- Link to Faculty Login page -->
+                    <img src="https://img.icons8.com/ios-filled/100/000000/businessman.png" alt="Faculty Icon">
+                    <p class="admin-text">Faculty</p>
+                </a>
+            </div>
+            <div class="icon-box">
+                <a href="StudentLogin.html">  <!-- Link to Student Login page -->
+                    <img src="https://img.icons8.com/ios-filled/100/000000/student-male.png" alt="Student Icon">
+                    <p class="student-text">Student</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

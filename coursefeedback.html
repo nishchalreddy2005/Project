@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Feedback</title>
+    <link rel="stylesheet" href="stylesss.css">
+</head>
+<body>
+    <div class="feedback-container">
+        <h2>Course Feedback</h2>
+        <form id="feedback-form" onsubmit="return submitForm()">
+            <div class="question">
+                <label for="q1">1) How well did the course meet your expectations in terms of content and learning outcomes?</label>
+                <input type="number" id="q1" min="1" max="5" placeholder="Scale: 1 – Did not meet expectations to 5 – Exceeded expectations" required>
+            </div>
+
+            <div class="question">
+                <label for="q2">2) How engaging and relevant did you find the course materials (e.g., readings, assignments, resources)?</label>
+                <input type="number" id="q2" min="1" max="5" placeholder="Scale: 1 – Did not meet expectations to 5 – Exceeded expectations" required>
+            </div>
+
+            <div class="question">
+                <label for="q3">3) How manageable was the workload for this course?</label>
+                <input type="number" id="q3" min="1" max="5" placeholder="Scale: 1 – Did not meet expectations to 5 – Exceeded expectations" required>
+            </div>
+
+            <div class="question">
+                <label for="q4">4) How effective were the assessments (e.g., quizzes, exams, projects) in measuring your understanding of the material?</label>
+                <input type="number" id="q4" min="1" max="5" placeholder="Scale: 1 – Did not meet expectations to 5 – Exceeded expectations" required>
+            </div>
+
+            <div class="question">
+                <label for="q5">5) What is one suggestion you have for improving this course?</label>
+                <input type="text" id="q5" placeholder="Open-ended" required>
+            </div>
+
+            <div class="submit-button">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function submitForm() {
+            // Perform any validation or processing if necessary
+            window.location.href = 'studentdashboed.html'; // Redirect to the desired page
+            return false; // Prevent default form submission
+        }
+    </script>
+</body>
+</html>
